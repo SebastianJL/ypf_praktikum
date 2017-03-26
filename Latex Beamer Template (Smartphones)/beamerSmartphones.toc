@@ -1,0 +1,15 @@
+\beamer@endinputifotherversion {3.24pt}
+\beamer@sectionintoc {1}{Historical and current electric circuits and devices}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Analog Circuits}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Digital Circuits}{6}{0}{1}
+\beamer@sectionintoc {2}{How does a transistor work?}{28}{0}{2}
+\beamer@subsectionintoc {2}{1}{Semiconductors}{28}{0}{2}
+\beamer@subsectionintoc {2}{2}{Transistors}{39}{0}{2}
+\beamer@sectionintoc {3}{Future Solutions and Applications}{55}{0}{3}
+\beamer@subsectionintoc {3}{1}{UTB-SOI and FINFET}{61}{0}{3}
+\beamer@subsectionintoc {3}{2}{Moore's Law}{71}{0}{3}
+\beamer@subsectionintoc {3}{3}{Where does this end?}{74}{0}{3}
+\beamer@subsectionintoc {3}{4}{Tunnel FET (TFET)}{82}{0}{3}
+\beamer@sectionintoc {4}{Sources}{90}{0}{4}
+\beamer@sectionintoc {5}{Questions}{91}{0}{5}
+\beamer@sectionintoc {6}{Backup Slides}{92}{0}{6}
