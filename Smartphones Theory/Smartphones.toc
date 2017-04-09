@@ -1,0 +1,34 @@
+\select@language {ngerman}
+\contentsline {section}{\numberline {1}Historical and current electric circuits and devices}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Analog circuits}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Digital circuits}{4}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}Binary representation}{4}{subsubsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2}Bool Algebra and logical circuits}{4}{subsubsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.3}Vacuum tubes}{5}{subsubsection.1.2.3}
+\contentsline {subsubsection}{\numberline {1.2.4}Transistors}{8}{subsubsection.1.2.4}
+\contentsline {subsubsection}{\numberline {1.2.5}Logic gates}{9}{subsubsection.1.2.5}
+\contentsline {subsubsection}{\numberline {1.2.6}Integrated circuits}{9}{subsubsection.1.2.6}
+\contentsline {section}{\numberline {2}How does a Transistor work?}{10}{section.2}
+\contentsline {subsection}{\numberline {2.1}Semiconductors}{10}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Doping}{11}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}p-n junction}{12}{subsubsection.2.1.2}
+\contentsline {subsection}{\numberline {2.2}Transistors}{14}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Bipolar Junction transistors (BJT)}{14}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Field effect transistors (FET)}{16}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Differences, advantages and disadvantages of BJTs and MOSFETs}{18}{subsubsection.2.2.3}
+\contentsline {section}{\numberline {3}Future Solutions and Applications}{19}{section.3}
+\contentsline {subsection}{\numberline {3.1}Moore's law}{20}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Wo ist Schluss? Tunnel effect?}{21}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}UTBSOI and FINFET}{22}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Ultrathin Body Silicon on Insulator (UTB SOI)}{23}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}From 2D to 3D: FinFET}{23}{subsubsection.3.3.2}
+\contentsline {subsection}{\numberline {3.4}Tunnel FET (TFET)}{24}{subsection.3.4}
+\contentsline {section}{\numberline {4}Sources}{26}{section.4}
+\contentsline {section}{\numberline {5}questions to ask}{26}{section.5}
+\contentsline {subsection}{\numberline {5.1}Why silicon?}{26}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Avalanche breakdown in reverse bias}{27}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}What happens if you operate the n-p-n transistor the other way around?}{27}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Advantages and disadvantages of BJT and FET?}{27}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Manufacturing processes}{27}{subsection.5.5}
+\contentsline {subsubsection}{\numberline {5.5.1}Photolithographic techniques}{27}{subsubsection.5.5.1}
+\contentsline {subsubsection}{\numberline {5.5.2}Logic gates}{27}{subsubsection.5.5.2}

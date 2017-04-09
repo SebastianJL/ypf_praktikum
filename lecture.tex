@@ -24,7 +24,7 @@
 \begin{titlepage}
 	\maketitle
 		\begin{center}
-			Email: johannes.lade@uzh.ch
+			Email: nik.dennler@uzh.ch, johannes.lade@uzh.ch
 		\end{center}
 	\thispagestyle{empty}
 \end{titlepage}
@@ -32,9 +32,78 @@
 \tableofcontents
 \newpage
 
+\section{Catchy Introduction}
+\subsection{How to build a computer?}
 
-\section{Know Errors}
 
+\section{Quick Theory}
+\subsection{Digital Circuits}
+Talking of circuits, we differ between analogue circuits and digital circuits. The difference lays actually in the format of the signal that represents the carried information. \newline
+An analogue signal uses some attribute of the medium to convey the signal's information. In electric circuits is it the voltage, current or frequency, that is varied in order to create an electric signal. Analog electronic circuits are those in which the threshold of the current or voltage varies \underline{continuously} over time, corresponding to the information being represented. Analog circuits follow Kirchhoff's circuit laws: all the currents at a node (a place where wires meet), and the voltage around a closed loop of wires is zero. \newline
+In digital electronic circuits, electric signals take on \underline{discrete values} to represent logical and numeric values, which then represent the information that is being processed. Every digital circuit is also a analog circuit, but it has (just two) discrete potential levels in use. 
+
+\subsection{Binary Numbers}
+Almost always, binary encoding is used: one voltage represents a binary '1' and another voltage, usually a value near the ground potential, represents a binary '0'. Those binary digits, each of them called one 'bit', can then be used to represent numbers and characters and therefore to carry information. The binary code was invented and first used by Gottfried Leibniz in 1679.
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.5\textwidth}
+%  \centering
+  \includegraphics[width=1\textwidth]{binary.png}%
+  \caption{Binary representation of one bit}%
+  \label{fig:binary}
+\end{minipage}%
+\begin{minipage}{.4\textwidth}
+  \centering
+  \includegraphics[width=0.8\textwidth]{leibniz}%
+  \caption{Painting of Gottfried Leibniz}%
+  \label{fig:leibniz}
+\end{minipage}
+\end{figure}
+
+\subsection{Boolesque Algebra and its implementation}
+To understand how a processor can actually perform calculations and follow algorithms with those binary numbers, some knowledge about Boolean logic has to be obtained first. We translate the digit '\texttt{1}' to \texttt{True} and the digit '\texttt{0}' to \texttt{False}. The Bool-Algebra (first half of the 19. century by George Boole) defines three main operations: 
+
+%\noindent
+\begin{itemize}
+ \item \textbf{The conjunction:} $a\land b$ is $True$ if and only if $a$ is $True$ and $b$ is $True$.\\
+ \item \textbf{The disjunction:} $a\lor b$  is $True$ if and only if $a$ is $True$ or $b$ is $True$ or $a\wedge b$ is $True$.\\
+ \item \textbf{The negation:}  $\neg a$ is $True$ if and only if $a$ is $False$. 
+\end{itemize}
+
+\subsection{Truth tables}
+These Bool operators can be represented in so called truth tables as follows. We choose here again the $1 / 0$ representation.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c|c|c|c}
+\textbf{$a$} & \textbf{$b$} & \textbf{$a\land b$} & \textbf{$a\lor b$} & \textbf{$\neg a$} \\ \hline
+0          & 0          & 0            & 0            & 1           \\
+1          & 0          & 0            & 1            & 0           \\
+0          & 1          & 0            & 1            & 1           \\
+1          & 1          & 1            & 1            & 0          
+\end{tabular}
+\caption{truth table}
+\label{tab:truth}
+\end{table}
+
+%\noindent
+The operations of the Boolean Algebra are Associative, Commutative and Distributive. They have a Neutral, an Inverse and a Zero element. One can easily imagine, that those operations can be combined and added in number to create more complex calculation operators. This is actually exactly what happens in our computers, servers and smartphones, of course on a very large scale. 
+
+\section{Combinatoric circuits}
+\subsection{General}
+\subsection{Construction of a combinatoric circuit}
+\subsubsection{Truth table}
+\subsubsection{Equation}
+\subsubsection{Draw circuit with logic elements}
+\subsubsection{Unify}
+
+\section{Sequential circuit}
+\subsection{Latch}
+\subsection{Construction of a sequential circuit}
+
+
+\newpage
 \section{Exercise Block 1}
 
 \subsection{Exclusive OR (15min)}\label{subsec:ex-1}

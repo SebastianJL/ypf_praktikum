@@ -1,10 +1,26 @@
-\contentsline {section}{\numberline {1}Know Errors}{2}
-\contentsline {section}{\numberline {2}Exercise Block 1}{2}
-\contentsline {subsection}{\numberline {2.1}Exclusive OR (15min)}{2}
-\contentsline {subsection}{\numberline {2.2}XOR to the Next (15min)}{2}
-\contentsline {section}{\numberline {3}Excercise Block 2}{2}
-\contentsline {subsection}{\numberline {3.1}Half-Adder (30min)}{2}
-\contentsline {subsection}{\numberline {3.2}Full-Adder (30min)}{2}
-\contentsline {section}{\numberline {4}Known Errors}{2}
-\contentsline {subsection}{\numberline {4.1}Giant Logic Gates}{2}
-\contentsline {subsection}{\numberline {4.2}Bread Board}{3}
+\contentsline {section}{\numberline {1}Catchy Introduction}{2}
+\contentsline {subsection}{\numberline {1.1}How to build a computer?}{2}
+\contentsline {section}{\numberline {2}Quick Theory}{2}
+\contentsline {subsection}{\numberline {2.1}Digital Circuits}{2}
+\contentsline {subsection}{\numberline {2.2}Binary Numbers}{2}
+\contentsline {subsection}{\numberline {2.3}Boolesque Algebra and its implementation}{2}
+\contentsline {subsection}{\numberline {2.4}Truth tables}{3}
+\contentsline {section}{\numberline {3}Combinatoric circuits}{3}
+\contentsline {subsection}{\numberline {3.1}General}{3}
+\contentsline {subsection}{\numberline {3.2}Construction of a combinatoric circuit}{3}
+\contentsline {subsubsection}{\numberline {3.2.1}Truth table}{3}
+\contentsline {subsubsection}{\numberline {3.2.2}Equation}{3}
+\contentsline {subsubsection}{\numberline {3.2.3}Draw circuit with logic elements}{3}
+\contentsline {subsubsection}{\numberline {3.2.4}Unify}{3}
+\contentsline {section}{\numberline {4}Sequential circuit}{3}
+\contentsline {subsection}{\numberline {4.1}Latch}{3}
+\contentsline {subsection}{\numberline {4.2}Construction of a sequential circuit}{3}
+\contentsline {section}{\numberline {5}Exercise Block 1}{4}
+\contentsline {subsection}{\numberline {5.1}Exclusive OR (15min)}{4}
+\contentsline {subsection}{\numberline {5.2}XOR to the Next (15min)}{4}
+\contentsline {section}{\numberline {6}Excercise Block 2}{4}
+\contentsline {subsection}{\numberline {6.1}Half-Adder (30min)}{4}
+\contentsline {subsection}{\numberline {6.2}Full-Adder (30min)}{4}
+\contentsline {section}{\numberline {7}Known Errors}{4}
+\contentsline {subsection}{\numberline {7.1}Giant Logic Gates}{4}
+\contentsline {subsection}{\numberline {7.2}Bread Board}{5}
