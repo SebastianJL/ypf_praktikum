@@ -39,7 +39,7 @@
 \section{Quick Theory}
 \subsection{Digital Circuits}
 Talking of circuits, we differ between analogue circuits and digital circuits. The difference lays actually in the format of the signal that represents the carried information. \newline
-An analogue signal uses some attribute of the medium to convey the signal's information. In electric circuits is it the voltage, current or frequency, that is varied in order to create an electric signal. Analog electronic circuits are those in which the threshold of the current or voltage varies \underline{continuously} over time, corresponding to the information being represented. Analog circuits follow Kirchhoff's circuit laws: all the currents at a node (a place where wires meet), and the voltage around a closed loop of wires is zero. \newline
+An analogue signal uses some attribute of the medium to convey the signal's information. In electric circuits is it the voltage, current or frequency, that is varied in order to create an electric signal. Analog electronic circuits are those in which the threshold of the current or voltage varies \underline{continuously} over time, corresponding to the information being represented. They follow Kirchhoff's circuit laws: all the currents at a node (a place where wires meet), and the voltage around a closed loop of wires is zero. \newline
 In digital electronic circuits, electric signals take on \underline{discrete values} to represent logical and numeric values, which then represent the information that is being processed. Every digital circuit is also a analog circuit, but it has (just two) discrete potential levels in use. 
 
 \subsection{Binary Numbers}
@@ -68,11 +68,12 @@ To understand how a processor can actually perform calculations and follow algor
 \begin{itemize}
  \item \textbf{The conjunction:} $a\land b$ is $True$ if and only if $a$ is $True$ and $b$ is $True$.\\
  \item \textbf{The disjunction:} $a\lor b$  is $True$ if and only if $a$ is $True$ or $b$ is $True$ or $a\wedge b$ is $True$.\\
- \item \textbf{The negation:}  $\neg a$ is $True$ if and only if $a$ is $False$. 
+ \item \textbf{The negation:}  $\neg a$ is $True$ if and only if $a$ is $False$. A negated variable $a$ is also often written as $\overline{a}$.
 \end{itemize}
 
 \subsection{Truth tables}
 These Bool operators can be represented in so called truth tables as follows. We choose here again the $1 / 0$ representation.
+
 
 \begin{table}[H]
 \centering
@@ -90,16 +91,55 @@ These Bool operators can be represented in so called truth tables as follows. We
 %\noindent
 The operations of the Boolean Algebra are Associative, Commutative and Distributive. They have a Neutral, an Inverse and a Zero element. One can easily imagine, that those operations can be combined and added in number to create more complex calculation operators. This is actually exactly what happens in our computers, servers and smartphones, of course on a very large scale. 
 
+
+
+\subsection{Logical Formulas}
+To construct a function, one wants to convert the information in the truth table in one compact formula. We use the disjuctive normal-form, which works as follows: 
+\newline \textbf{In the column of the operator output, look for logical $1$. Now for each line that has a $1$ in the output field, combine the input variables with a logical \textit{and} ($\land$). If the variable has a entry of $0$, we use the inversion notation with an overline. Then connect those expressions with a logical \textit{or} ($\lor$).} 
+\newline Now we have the boolean function in \underline{disjunctive normal-form} that describes our operator. Let's make two examples: \newline
+\begin{enumerate}
+ \item [\textbf{AND:}]$(a\land b)$
+ \item [\textbf{OR:}]$(a\land \overline{b})\lor(\overline{a}\land b)\lor(a\land b)$
+\end{enumerate}
+
+As you can see, does the expression for the \textbf{OR} look unnecessarily complicated, we could just write $(a\lor b)$. This would be in conjunctive normal-form, but the point is, to use always the same logical system (disjunctive normal-form!). When we have described the operator in this form, we can built it up easily with basic circuits elements.  
+
+\subsection{Drawing of a circuit}
+
+
 \section{Combinatoric circuits}
 \subsection{General}
-\subsection{Construction of a combinatoric circuit}
-\subsubsection{Truth table}
-\subsubsection{Equation}
-\subsubsection{Draw circuit with logic elements}
-\subsubsection{Unify}
+We differ between combinatoric circuits and sequential circuits. Combinatoric circuits are logical functions, whose \underline{output states are always exactly defined through their input variables}. This point will become more clear later when we look at sequential circuits. 
 
-\section{Sequential circuit}
-\subsection{Latch}
+\subsection{Construction of a combinatoric circuit}
+\begin{enumerate}
+	\item Write down the truth table.
+	\item\label{it:1} Construct the disjunctive normal form from your truth table.
+	\item Draw the circuit according to step \ref{it:1}.
+	\item Transform the circuit in such a way that it only uses NAND Gates.
+	\item Build the XOR you have drawn with the giant NAND gates.
+	\item How many NAND gates do you need? See if you can loose one or two gates.
+\end{enumerate}
+
+
+
+%\subsubsection{Truth table}                            
+%\subsubsection{Equation}                               
+%\subsubsection{Draw circuit with logic elements}       
+%\subsubsection{Unify}                                  
+                                                       
+\section{Sequential circuit}                           
+\subsection{General}
+Now we look at sequential circuits, which is different from the combinatoric circuit. Sequential circuits have something that can be looked at as a memory. The clue is, that the output of an operator is used again as one of the inputs. This means, that the circuit depends not only on combinatoric input variables, but also from the output of the step before. In this way, the functionality of a memory is realized. 
+
+\subsection{Elements}
+\subsubsection{Latch}
+This concept is easily explained with the most basic realization of a sequential circuit: The latch. 
+
+***picture latch***
+
+
+\subsubsection{Clock}
 \subsection{Construction of a sequential circuit}
 
 
@@ -145,6 +185,7 @@ A half-adder takes two bits $a$ and $b$ and adds them. It is called half-adder b
 
 \subsection{Full-Adder (30min)}
 
+\newpage
 \section{Known Errors}
 \subsection{Giant Logic Gates}
 \begin{itemize}
