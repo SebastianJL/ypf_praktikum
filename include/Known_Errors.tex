@@ -1,0 +1,27 @@
+\newpage
+\section{Known Errors}
+\subsection{Giant Logic Gates}
+\begin{itemize}
+	\item Check wether the power supply has a loose connection.
+\end{itemize}
+\subsection{Bread Board}
+\begin{itemize}
+	\item \textbf{Chip gets hot.} 
+	\begin{itemize}
+		\item You connected the power supply in the wrong direction. The chip consists of transistors i.e. diods. This means it only allows for the current to pass through the chip in one direction. Otherwise it gets grilled. Ask an assistant you'll probably have to throw it away.
+	\end{itemize}
+	\item \textbf{The led is not glowing.}
+	\begin{itemize}
+		\item Did you use the led we provided on the breadboard? It is set-up such that you don't have to think about how you have to connect it.
+		\item Should it really light up? Check with the voltmeter if your gate output really is at logic one.
+		\item If you really want to connect your own led think about two things. First you need to connect a $3\si{\kilo\ohm}$ resistor in series. Otherwise the led will blow. Second, remember that led stands for Light Emitting Diod. This means that you have to connect it with the longer leg towards the high voltage. 
+	\end{itemize}
+	\item \textbf{You forgott to connect the power supply.}
+	\begin{itemize}
+		\item Well I guess you know what you have to do now ;)
+	\end{itemize}
+	\item \textbf{Your measurements on the gate ouput don't fit your expectations.}
+	\begin{itemize}
+		\item What did you measure? Remember that the logic follows the voltage. In the range of $0-0.8\si{\volt}$ the output is on logic $0$. In the range of $2-5\si{\volt}$ the output is on logic $1$. The current is not affected by this and doesn't have to follow the same principle.
+	\end{itemize}
+\end{itemize}
