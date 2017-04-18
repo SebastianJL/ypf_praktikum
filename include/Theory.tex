@@ -98,6 +98,15 @@ Now, before we set up this circuit, we have to think practical: Would it not be 
   \label{fig:equivalence_optimized}
 \end{figure}
 
+So how do we actually replace the element with NAND's? To figure out the conversion, we compare the truth table of the NAND with that of different conminations of the three basic elements. We see, that a NAND with inverted output is a NAND (per definition) and an OR with inverted inputs is also a NAND. The conversions are seen below again. The clue is now, that if we insert anywhere two inverters after each other, it does not change the signal. After doing this, one can use the conversions below and end up with a circuit completely build up of NAND's. 
+
+\begin{figure}[H]
+\centering
+  \includegraphics[height=0.33\textwidth]{nand_conversion}%
+  \caption{Conversion to NAND}%
+  \label{fig:nand_conversion}
+\end{figure}
+
 \section{Combinatoric circuits}
 \subsection{General}
 We differ between combinatoric circuits and sequential circuits. Combinatoric circuits are logical functions, whose \underline{output states are always exactly defined through their input variables}. This point will become more clear later when we look at sequential circuits. 
@@ -105,11 +114,12 @@ We differ between combinatoric circuits and sequential circuits. Combinatoric ci
 \subsection{Construction of a combinatoric circuit}
 \begin{enumerate}
 	\item Write down the truth table.
-	\item\label{it:1} Construct the disjunctive normal form from your truth table.
-	\item Draw the circuit according to step \ref{it:1}.
+	\item Construct the disjunctive normal form from your truth table.
+	\item Draw the circuit accordingly.
 	\item Transform the circuit in such a way that it only uses NAND Gates.
-	\item Build the XOR you have drawn with the giant NAND gates.
-	\item How many NAND gates do you need? See if you can loose one or two gates.
+	      How many NAND gates do you need? See if you can loose one or two gates.
+	\item Check/discuss the circuit design again. An effective method is to create the truth table again just by looking at the circuit, then compare with what you should get. 
+	\item If you're sure that your design works, build up the circuit with real components and connections. 
 \end{enumerate}
 
 
@@ -125,10 +135,16 @@ Now we look at sequential circuits, which is different from the combinatoric cir
 
 \subsection{Elements}
 \subsubsection{Latch}
-This concept is easily explained with the most basic realization of a sequential circuit: The latch. 
+This concept is easily explained with the most basic realization of a sequential circuit. If the output has a default value of zero (this means, that there is no current on the output line in the beginning), then this zero-value also goes to one of the inputs. Now this stays as it is as long \texttt{A=0} as well. But now, if for once \texttt{A=1}, the OR-Operator will bring an output of \texttt{1}. Now, even if \texttt{A=0} again, will the output stay on \texttt{1}. We can say, that we saved the binary number \texttt{1}.
 
-***picture latch***
+\begin{figure}[H]
+\centering
+  \includegraphics[height=0.2\textwidth]{loop}%
+  \caption{Latch}%
+  \label{fig:loop}
+\end{figure}
 
+Of course, this is not very sophisticated yet, we cannot remove the output again or save something else. 
 
 \subsubsection{Clock}
 \subsection{Construction of a sequential circuit}
