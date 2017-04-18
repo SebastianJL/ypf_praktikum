@@ -34,15 +34,20 @@
 
 \section{Catchy Introduction}
 \subsection{How to build a computer?}
+What can a computer do?
+Add
+Save
 
+Big question is actually how to handle numbers. Difficult for computer/circuits to differ between range of voltages, easiest way is just to have two states. So our conventional system (decimal) is not very convenient, would be easier to have system that works with two numbers only. 
 
 \section{Quick Theory}
 \subsection{Digital Circuits}
 Talking of circuits, we differ between analogue circuits and digital circuits. The difference lays actually in the format of the signal that represents the carried information. \newline
 An analogue signal uses some attribute of the medium to convey the signal's information. In electric circuits is it the voltage, current or frequency, that is varied in order to create an electric signal. Analog electronic circuits are those in which the threshold of the current or voltage varies \underline{continuously} over time, corresponding to the information being represented. They follow Kirchhoff's circuit laws: all the currents at a node (a place where wires meet), and the voltage around a closed loop of wires is zero. \newline
-In digital electronic circuits, electric signals take on \underline{discrete values} to represent logical and numeric values, which then represent the information that is being processed. Every digital circuit is also a analog circuit, but it has (just two) discrete potential levels in use. 
+In digital electronic circuits, electric signals take on \underline{discrete values} to represent logical and numeric values, which then represent the information that is being processed. Every digital circuit is also a analog circuit, but it has ideally (just two) discrete potential levels in use. 
 
 \subsection{Binary Numbers}
+%erkläre mehr, über Dezimalzahlsystem, Vergleich Dezimal/Binär, Übertrag, etc.!!! Motivation, wir haben nur zwei Zustände. 
 Almost always, binary encoding is used: one voltage represents a binary '1' and another voltage, usually a value near the ground potential, represents a binary '0'. Those binary digits, each of them called one 'bit', can then be used to represent numbers and characters and therefore to carry information. The binary code was invented and first used by Gottfried Leibniz in 1679.
 
 \begin{figure}[H]
@@ -61,19 +66,22 @@ Almost always, binary encoding is used: one voltage represents a binary '1' and 
 \end{minipage}
 \end{figure}
 
-\subsection{Boolesque Algebra and its implementation}
-To understand how a processor can actually perform calculations and follow algorithms with those binary numbers, some knowledge about Boolean logic has to be obtained first. We translate the digit '\texttt{1}' to \texttt{True} and the digit '\texttt{0}' to \texttt{False}. The Bool-Algebra (first half of the 19. century by George Boole) defines three main operations: 
+\subsection{Boolean Algebra and its implementation}
+To understand how a processor can actually perform calculations and follow algorithms with those binary numbers, some knowledge about Boolean logic has to be obtained first. The Boolean Algebra (first half of the 19. century by George Boole) defines three main operations: 
 
 %\noindent
 \begin{itemize}
- \item \textbf{The conjunction:} $a\land b$ is $True$ if and only if $a$ is $True$ and $b$ is $True$.\\
- \item \textbf{The disjunction:} $a\lor b$  is $True$ if and only if $a$ is $True$ or $b$ is $True$ or $a\wedge b$ is $True$.\\
- \item \textbf{The negation:}  $\neg a$ is $True$ if and only if $a$ is $False$. A negated variable $a$ is also often written as $\overline{a}$.
+ \item \textbf{The conjunction:} $a\land b$ is $1$ if and only if $a$ is $1$ and $b$ is $1$.\\
+ \item \textbf{The disjunction:} $a\lor b$  is $1$ if and only if $a$ is $1$ or $b$ is $1$ or $a\wedge b$ is $1$.\\
+ \item \textbf{The negation:}  $\neg a$ is $1$ if and only if $a$ is $0$. A negated variable $a$ is also often written as $\overline{a}$.
 \end{itemize}
 
+\noindent
+The operations of the Boolean Algebra are Associative, Commutative and Distributive. They have a Neutral, an Inverse and a Zero element. One can easily imagine, that those operations can be combined and added in number to create more complex calculation operators. This is actually exactly what happens in our computers, servers and smartphones, of course on a very large scale. 
 \subsection{Truth tables}
-These Bool operators can be represented in so called truth tables as follows. We choose here again the $1 / 0$ representation.
+These Boolean operators can be represented in so called truth tables as follows:
 
+%%include also ==, XOR, etc... 
 
 \begin{table}[H]
 \centering
@@ -88,9 +96,7 @@ These Bool operators can be represented in so called truth tables as follows. We
 \label{tab:truth}
 \end{table}
 
-%\noindent
-The operations of the Boolean Algebra are Associative, Commutative and Distributive. They have a Neutral, an Inverse and a Zero element. One can easily imagine, that those operations can be combined and added in number to create more complex calculation operators. This is actually exactly what happens in our computers, servers and smartphones, of course on a very large scale. 
-
+One can also represent more operations than the three basic one. Let's look for example at the comparison operator, the exclusive or and the negated and. 
 
 
 \subsection{Logical Formulas}
