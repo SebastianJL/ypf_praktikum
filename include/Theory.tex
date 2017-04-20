@@ -144,7 +144,23 @@ This concept is easily explained with the most basic realization of a sequential
   \label{fig:loop}
 \end{figure}
 
-Of course, this is not very sophisticated yet, we cannot remove the output again or save something else. 
+\noindent
+Of course, this is not very sophisticated yet, we cannot remove the output again or save something else. If we want a circuit that can set and reset a variable, we need a so called Flip-Flop. A diagram of a Set-Reset-Flip-Flop is shown below. One can see, that the output of the first OR-operator is fed back to the second OR-operator and vice versa. Now we can set and reset a variable, which gives us a memory function. It takes a bit of thinking to figure out what's going on exactly, which we are going to do later when we are going to build a sequential circuit. 
+
+\begin{figure}[H]
+\centering
+  \includegraphics[height=0.35\textwidth]{RSFF}%
+  \caption{RS-Flip-Flop}%
+  \label{fig:RSFF}
+\end{figure}
 
 \subsubsection{Clock}
+Because now we have the time as an additional dimension in our circuits, it is important to know, what exactly happens when. To control this, often a clock (Takt) is implemented. For this, we connect an additional variable (1 or 0) over an AND-operator with the input variables. If the clock is set to zero, the circuit is blocked and nothing can come in. If it is set to one, the circuit is open an may work as designed. The clue is now, to time the clock variable such, that it opens the circuit every time again, when the previous computation is over and the output ready for the next step. Another approach will be, that the circuit is designed in a way, that it is by construction blocked until the computation is over.
+
+\begin{figure}[H]
+\centering
+  \includegraphics[height=0.2\textwidth]{clock}%
+  \caption{Realization of a clock}%
+  \label{fig:clock}
+\end{figure}
 \subsection{Construction of a sequential circuit}
