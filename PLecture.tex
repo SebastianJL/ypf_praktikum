@@ -2,6 +2,8 @@
 \usepackage{beamerthemeshadow}
 \usepackage{tabulary}
 \usepackage{xcolor}
+\usepackage{color}
+
 \usepackage{mathtools}
 \usepackage{amsmath}
 \usepackage{graphicx}
@@ -41,6 +43,8 @@
 
 \begin{frame}\frametitle{Table of Contents}\tableofcontents
 \end{frame} 
+
+
 \section{Introduction}
 \begin{frame}\frametitle{How does this work??}
   \begin{columns}
@@ -62,11 +66,21 @@
 
 
 \begin{frame}\frametitle{What do we need?}
+  \centering
+  Numbers!
+  \begin{figure}
+  \includegraphics[width=0.7\textwidth]{numbers}
+
+  \end{figure}
+
+\end{frame}
+
+\begin{frame}\frametitle{Now what do we do with it?}
   \begin{columns}
   \begin{column}{6cm}
   \begin{figure}
   \includegraphics[width=1\textwidth]{abakus}
-  \caption{Abakus}
+  \caption{Calculations}
   \end{figure}
   %\vspace{3cm} 
   \end{column}
@@ -78,6 +92,185 @@
   \end{column}
   \end{columns}
 \end{frame}
+
+
+\section{Digital Circuits}
+\begin{frame}\frametitle{Analog Circuit}
+  \begin{columns}
+  \begin{column}{6cm}
+  \begin{itemize}
+   \item Continuous Voltage Levels
+   \item Kirchhoff Ciruit Law's
+   \item Example: Guitar Amplifier
+
+  \end{itemize}
+
+
+  \end{column}
+  \begin{column}{6cm}
+  \begin{figure}
+  \includegraphics[width=1\textwidth]{analog}
+  \caption{Analog Signal}
+  \end{figure}
+  \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Digital Circuit}
+  \begin{columns}
+  \begin{column}{6cm}
+  \begin{itemize}
+   \item Discrete Voltage Levels
+   \item Is always based on an analog circuit.
+   \item Example: Computer
+   \item $\Rightarrow$ Binary Numbers
+
+  \end{itemize}
+
+
+  \end{column}
+  \begin{column}{6cm}
+  \begin{figure}
+  \includegraphics[width=1\textwidth]{digital}
+  \caption{Digital Signal}
+  \end{figure}
+  \end{column}
+  \end{columns}
+\end{frame}
+
+
+\section{Binary Numbers}
+\begin{frame}\frametitle{Binary Numbers}
+  \begin{columns}
+  \begin{column}{6cm}
+  \begin{itemize}
+   \item High Voltage = 1
+   \item Low Voltage = 0
+   \item Can represent anything from numbers over letters to mp4 videos.
+  \end{itemize}
+
+  \end{column}
+  \begin{column}{6cm}
+  \begin{figure}
+  \includegraphics[width=1\textwidth]{binary}
+  \caption{Binary Number}
+  \end{figure}
+  \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}\frametitle{Binary Numbers}
+  \begin{figure}
+  \includegraphics[height=0.7\textheight]{leibniz}
+  \caption{Gottfried Leibniz, 1679}
+  \end{figure}
+\end{frame}
+
+
+\section{Boolean Algebra}
+\begin{frame}\frametitle{Boolean Algebra}
+  \begin{columns}
+  \begin{column}{6cm}
+  \begin{itemize}
+    \item \textbf{The conjunction:} $a\land b$ is $1$ if and only if $a$ is $1$ and $b$ is $1$.\\
+    \item \textbf{The disjunction:} $a\lor b$  is $1$ if and only if $a$ is $1$ or $b$ is $1$ or both.\\
+    \item \textbf{The negation:}  $\overline{a}$ is $1$ if and only if $a$ is $0$.
+  \end{itemize}
+  \end{column}
+  
+    
+  \begin{column}{6cm}
+  \begin{table}[H]
+  \centering
+  \begin{tabular}{c|c|c|c|c}
+  \textbf{$a$} & \textbf{$b$} & \textbf{$a\land b$} & \textbf{$a\lor b$} & \textbf{$\overline{a}$} \\ \hline
+  0          & 0          & 0            & 0            & 1           \\
+  1          & 0          & 0            & 1            & 0           \\
+  0          & 1          & 0            & 1            & 1           \\
+  1          & 1          & 1            & 1            & 0          
+  \end{tabular}
+  \caption{truth table}
+  \label{tab:truth}
+  \end{table}
+  \end{column}
+  
+  \end{columns}
+\end{frame}
+
+\section{Truth Tables}
+\begin{frame}\frametitle{Truth tables}
+  \begin{table}[H]
+  \centering
+  \begin{tabular}{c|c|c|c|c}
+  \textbf{$a$} & \textbf{$b$} & \textbf{$a\land b$} & \textbf{$a\lor b$} & \textbf{$\overline{a}$} \\ \hline
+  0          & 0          & 0            & 0            & 1           \\
+  1          & 0          & 0            & 1            & 0           \\
+  0          & 1          & 0            & 1            & 1           \\
+  1          & 1          & 1            & 1            & 0          
+  \end{tabular}
+  \caption{truth table}
+  \label{tab:truth2}
+  \end{table}
+\end{frame}
+
+\begin{frame}\frametitle{Truth tables}
+   \begin{table}[H]
+  \centering
+  \begin{tabular}{c|c|c|c|c|c|c}
+  \textbf{$a$} & \textbf{$b$} & \textbf{$a\land b$} & \textbf{$a\lor b$} & \textbf{$\overline{a}$} & \textbf{ \textcolor{red}{$a==b$}}  & \textbf{ \textcolor{red}{$a\ \overline{\land}\  b$}} \\ \hline
+  0          & 0          & 0            & 0            & 1          & 1        & 1      \\
+  1          & 0          & 0            & 1            & 0          & 0        & 1   \\
+  0          & 1          & 0            & 1            & 1          & 0        & 1  \\
+  1          & 1          & 1            & 1            & 0          & 1        & 0  
+  \end{tabular}
+  \caption{truth table}
+  \label{tab:truth}
+  \end{table}
+\end{frame}
+
+
+
+\section{Disjunctive Normal-Form}
+\begin{frame}
+  
+  \begin{columns}
+  \begin{column}{6cm}
+  \begin{itemize}
+    \item Let's convert this table in one compact formula!
+    \item Method: 
+    \item 
+  \end{itemize}
+  \end{column}
+  
+    
+  \begin{column}{6cm}
+  \begin{table}[H]
+  \centering
+  \begin{tabular}{c|c|c|c|c|c|c}
+  \textbf{$a$} & \textbf{$b$} & \textbf{$a\land b$} & \textbf{$a\lor b$} & \textbf{$\overline{a}$} & \textbf{ \textcolor{red}{$a==b$}}  & \textbf{ \textcolor{red}{$a\ \overline{\land}\  b$}} \\ \hline
+  0          & 0          & 0            & 0            & 1          & 1        & 1      \\
+  1          & 0          & 0            & 1            & 0          & 0        & 1   \\
+  0          & 1          & 0            & 1            & 1          & 0        & 1  \\
+  1          & 1          & 1            & 1            & 0          & 1        & 0  
+  \end{tabular}
+  \caption{truth table}
+  \label{tab:truth}
+  \end{table}
+  \end{column}
+  
+  \end{columns}  
+  
+  
+  
+\end{frame}
+
+
+
+
+\section{Drawing a circuit}
+\section{Combinatoric Circuits}
+\section{Sequential Circuits}
 
 
 
