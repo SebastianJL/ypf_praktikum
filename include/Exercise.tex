@@ -83,28 +83,30 @@ Lukily the full-adder - which can add three bits - is easily built with two half
 	\label{fig:full-adder}
 \end{figure}
 \begin{itemize}
-	\item Fill in all possible combinations for
-\end{itemize}
-\begin{table}[]
-	\centering
-	\begin{tabular}{|c|c|c||c|c|}
-		\hline
-		$c_{in}$ & $a$ & $b$ & $\Sigma$ & $c_{out}$ \\ \hline
-		&     &     &          &           \\ \hline
-		&     &     &          &           \\ \hline
-		&     &     &          &           \\ \hline
-		&     &     &          &           \\ \hline
-		&     &     &          &           \\ \hline
-		&     &     &          &           \\ \hline
-		&     &     &          &           \\ \hline
-		&     &     &          &           \\ \hline
-	\end{tabular}
-	\caption{Truth table for the Full Adder.}
-	\label{tab:full-adder-truth-table}
-\end{table}
+	\item Fill in all possible combinations for $c_{in}$, $a$ and $b$ in table \ref{tab:full-adder-truth-table}. Think about what $\Sigma$ and $c_{out}$ should be and fill them in as well.
+	\item Visually test the circuit drawing for all possible combinations and compare it with your expectations for $\Sigma$ and $c_{out}$. Do they match?
 
-\section{Exercise Block 2b}
-\subsection{D FlipFlop}
-\subsection{D Master Slave}
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|c|c|c||c|c|}
+			\hline
+			$c_{in}$ & $a$ & $b$ & $\Sigma$ & $c_{out}$ \\ \hline
+			&     &     &          &           \\ \hline
+			&     &     &          &           \\ \hline
+			&     &     &          &           \\ \hline
+			&     &     &          &           \\ \hline
+			&     &     &          &           \\ \hline
+			&     &     &          &           \\ \hline
+			&     &     &          &           \\ \hline
+			&     &     &          &           \\ \hline
+		\end{tabular}
+		\caption{Truth table for the Full Adder.}
+		\label{tab:full-adder-truth-table}
+	\end{table}
+
+	\item Once you have convinced yourself that the circuit is correct, translate it into only NAND gates by using the half-adders you derived earlier. (Hint: Do not transform the OR gate until the very end. You will see that it simpliefies very easily into a NAND gate.)
+	\item Build the full adder on the breadboard.
+\end{itemize}
+
 
 \newpage
