@@ -176,6 +176,7 @@
     \item \textbf{The conjunction:} $a\land b$ is $1$ if and only if $a$ is $1$ and $b$ is $1$.\\
     \item \textbf{The disjunction:} $a\lor b$  is $1$ if and only if $a$ is $1$ or $b$ is $1$ or both.\\
     \item \textbf{The negation:}  $\overline{a}$ is $1$ if and only if $a$ is $0$.
+    \item Associative, Commutative, Distributive, Inverse, Zero
   \end{itemize}
   \end{column}
   
@@ -183,11 +184,11 @@
   \begin{column}{6cm}
   \begin{table}[H]
   \centering
-  \begin{tabular}{c|c|c|c|c}
+  \begin{tabular}{c|c||c|c|c}
   \textbf{$a$} & \textbf{$b$} & \textbf{$a\land b$} & \textbf{$a\lor b$} & \textbf{$\overline{a}$} \\ \hline
   0          & 0          & 0            & 0            & 1           \\
-  1          & 0          & 0            & 1            & 0           \\
   0          & 1          & 0            & 1            & 1           \\
+  1          & 0          & 0            & 1            & 0           \\
   1          & 1          & 1            & 1            & 0          
   \end{tabular}
   \caption{truth table}
@@ -202,11 +203,11 @@
 \begin{frame}\frametitle{Truth tables}
   \begin{table}[H]
   \centering
-  \begin{tabular}{c|c|c|c|c}
+  \begin{tabular}{c|c||c|c|c}
   \textbf{$a$} & \textbf{$b$} & \textbf{$a\land b$} & \textbf{$a\lor b$} & \textbf{$\overline{a}$} \\ \hline
   0          & 0          & 0            & 0            & 1           \\
-  1          & 0          & 0            & 1            & 0           \\
   0          & 1          & 0            & 1            & 1           \\
+  1          & 0          & 0            & 1            & 0           \\
   1          & 1          & 1            & 1            & 0          
   \end{tabular}
   \caption{truth table}
@@ -217,11 +218,11 @@
 \begin{frame}\frametitle{Truth tables}
    \begin{table}[H]
   \centering
-  \begin{tabular}{c|c|c|c|c|c|c}
-  \textbf{$a$} & \textbf{$b$} & \textbf{$a\land b$} & \textbf{$a\lor b$} & \textbf{$\overline{a}$} & \textbf{ \textcolor{red}{$a==b$}}  & \textbf{ \textcolor{red}{$a\ \overline{\land}\  b$}} \\ \hline
+  \begin{tabular}{c|c||c|c|c|c|c}
+  \textbf{$a$} & \textbf{$b$} & \textbf{$a\land b$} & \textbf{$a\lor b$} & \textbf{$\overline{a}$} & \textbf{ \textcolor{red}{$a==b$}}  & \textbf{ \textcolor{red}{$\overline{a\land  b}\ $}} \\ \hline
   0          & 0          & 0            & 0            & 1          & 1        & 1      \\
-  1          & 0          & 0            & 1            & 0          & 0        & 1   \\
   0          & 1          & 0            & 1            & 1          & 0        & 1  \\
+  1          & 0          & 0            & 1            & 0          & 0        & 1   \\
   1          & 1          & 1            & 1            & 0          & 1        & 0  
   \end{tabular}
   \caption{truth table}
@@ -238,8 +239,18 @@
   \begin{column}{6cm}
   \begin{itemize}
     \item Let's convert this table in one compact formula!
-    \item Method: 
-    \item 
+    \item Disjunctive Normal Form:
+    \begin{enumerate}
+     \item \textbf{Rows} with logical output \textbf{1}.
+     \item Combine inputs with AND. Each row separatly.
+     \item Combine rows with logical OR.
+    \end{enumerate}
+
+    
+    \item Example 1: 
+    \begin{itemize}
+      \item [\textbf{AND:}]$(a\land b)$
+    \end{itemize}
   \end{itemize}
   \end{column}
   
@@ -247,12 +258,97 @@
   \begin{column}{6cm}
   \begin{table}[H]
   \centering
-  \begin{tabular}{c|c|c|c|c|c|c}
-  \textbf{$a$} & \textbf{$b$} & \textbf{$a\land b$} & \textbf{$a\lor b$} & \textbf{$\overline{a}$} & \textbf{ \textcolor{red}{$a==b$}}  & \textbf{ \textcolor{red}{$a\ \overline{\land}\  b$}} \\ \hline
-  0          & 0          & 0            & 0            & 1          & 1        & 1      \\
-  1          & 0          & 0            & 1            & 0          & 0        & 1   \\
-  0          & 1          & 0            & 1            & 1          & 0        & 1  \\
-  1          & 1          & 1            & 1            & 0          & 1        & 0  
+  \begin{tabular}{c|c||c}
+  \textbf{$a$} & \textbf{$b$} & \textbf{$a\land b$} \\ \hline
+  0          & 0          & 0      \\
+  0          & 1          & 0  \\
+  1          & 0          & 0   \\
+  1          & 1          & 1 
+  \end{tabular}
+  \caption{truth table}
+  \label{tab:truth}
+  \end{table}
+  \end{column}
+  
+  \end{columns}  
+\end{frame}
+
+
+\begin{frame}
+  
+  \begin{columns}
+  \begin{column}{6cm}
+  \begin{itemize}
+    \item Let's convert this table in one compact formula!
+    \item Disjunctive Normal Form:
+    \begin{enumerate}
+     \item \textbf{Rows} with logical output \textbf{1}.
+     \item Combine inputs with AND. Each row separatly.
+     \item Combine rows with logical OR.
+    \end{enumerate}
+
+    
+    \item Example 2: 
+    \begin{itemize}
+      \item [\textbf{OR:}]$(a\land \overline{b})\lor(\overline{a}\land b)\lor(a\land b)$
+    \end{itemize}
+  \end{itemize}
+  \end{column}
+  
+    
+  \begin{column}{6cm}
+  \begin{table}[H]
+  \centering
+  \begin{tabular}{c|c||c}
+  \textbf{$a$} & \textbf{$b$} & \textbf{$a\lor b$} \\ \hline
+  0          & 0          & 0      \\
+  0          & 1          & 1  \\
+  1          & 0          & 1   \\
+  1          & 1          & 1 
+  \end{tabular}
+  \caption{truth table}
+  \label{tab:truth}
+  \end{table}
+  \end{column}
+  
+  \end{columns}  
+  
+  
+  
+\end{frame}
+
+
+\begin{frame}
+  
+  \begin{columns}
+  \begin{column}{6cm}
+  \begin{itemize}
+    \item Let's convert this table in one compact formula!
+    \item Disjunctive Normal Form:
+    \begin{enumerate}
+     \item \textbf{Rows} with logical output \textbf{1}.
+     \item Combine inputs with AND. Each row separatly.
+     \item Combine rows with logical OR.
+    \end{enumerate}
+
+    
+    \item Example 3: 
+    \begin{itemize}
+      \item [\textbf{==:}]$(\overline{a}\land \overline{b})\lor(a\land b)$
+    \end{itemize}
+  \end{itemize}
+  \end{column}
+  
+    
+  \begin{column}{6cm}
+  \begin{table}[H]
+  \centering
+  \begin{tabular}{c|c||c}
+  \textbf{$a$} & \textbf{$b$} & \textbf{$a == b$} \\ \hline
+  0          & 0          & 1      \\
+  0          & 1          & 0  \\
+  1          & 0          & 0   \\
+  1          & 1          & 1 
   \end{tabular}
   \caption{truth table}
   \label{tab:truth}
@@ -268,7 +364,85 @@
 
 
 
+
+
+
 \section{Drawing a circuit}
+
+\begin{frame}
+  \begin{figure}[H]
+\centering
+  \includegraphics[height=0.6\textwidth]{logic_symbols}%
+  \caption{Logic circuit symbols}%
+  \label{fig:logic_symbols}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+  \begin{columns}
+  \begin{column}{5cm}
+  Disjunctive normal-form for the equivalence: 
+  \newline\newline
+  $(\overline{a}\land \overline{b})\lor(a\land b)$
+  \end{column}
+  
+  \begin{column}{6cm}
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=1\textwidth]{equivalence}%
+      \caption{Example for circuit design: the equivalence}%
+      \label{fig:equivalence}
+    \end{figure}
+  \end{column}
+  \end{columns}  
+\end{frame}
+
+
+\begin{frame}
+  \begin{columns}
+  \begin{column}{5cm}
+  Now let's make it easier: Use only NAND's!
+  \newline\newline
+ % $(\overline{a}\land \overline{b})\lor(a\land b)$
+  \end{column}
+  
+  \begin{column}{6cm}
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=1\textwidth]{equivalence_optimized}%
+      \caption{Optimized equivalence circuit}%
+      \label{fig:equivalence_optimized}
+    \end{figure}
+  \end{column}
+  \end{columns}  
+\end{frame}
+
+
+\begin{frame}
+  \begin{columns}
+  \begin{column}{5cm}
+  Now let's make it easier: Use only NAND's!
+  How?
+  \newline\newline
+ % $(\overline{a}\land \overline{b})\lor(a\land b)$
+  \end{column}
+  
+  \begin{column}{6cm}
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=1\textwidth]{nand_conversion}%
+      \caption{NAND Conversion}%
+      \label{fig:equivalence_optimized}
+    \end{figure}
+  \end{column}
+  \end{columns}  
+\end{frame}
+
+
+
+
+
 \section{Combinatoric Circuits}
 \section{Sequential Circuits}
 
