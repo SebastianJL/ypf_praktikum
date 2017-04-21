@@ -15,7 +15,7 @@
 \geometry{a4paper}
 
 \author{Nik Dennler \\ Johannes Lade}
-\title{Exercises Digital Electronics Lab}
+\title{Digital Electronics Lab\\ \textbf{Exercises}}
 \date{\today{}}
 
 
@@ -91,9 +91,9 @@ For binary digits (bits) we can do the same thing. Let's assume the following ca
 		\label{tab:half-adder-truth-table}
 	\end{table}
 	
-	\item Draw the two circuits from table \ref{tab:half-adder-truth-table} with the same steps as in section \ref{subsec:ex-1} without actually building them. (Hint: One of the two circuits you know already. Use the reduced form from the last exercise.)
-	\item With the two circuits drawn entirely with NAND gates, see if you can combine them into one.
-	\item Congrats, you have successfully drawn the circuit of a half adder. Now build one on the breadboard.
+		\item Draw the two circuits from table \ref{tab:half-adder-truth-table} and reduce them to NAND representation without actually building them. (Hint: One of the two circuits you know already. Use the reduced form from the last exercise.)
+		\item With the two circuits drawn entirely with NAND gates, see if you can combine them into one.
+		\item Congrats, you have successfully drawn the circuit of a half adder. Ask an assistant wether it is correct. Now build one on the breadboard.
 \end{itemize}
 \subsection{Full-Adder (30min)}
 You may have noticed that the half-adder - although you can add two bits and generate a carry bit - is not enough to add several bits together.
@@ -114,7 +114,7 @@ Because, how much use is a carry bit generatated by one circuit if we cannot use
 
 Lukily the full-adder - which can add three single bits - is easily built with two half-adders, hence the name. As the derivation of the full adder is beyond the scope of this lecture, we will simply introduce its logic circuit. For simplicity we pack the circuit of the half adder into one black box and simply denote its outputs with $\Sigma$ and $C$ (See figure \ref{fig:full-adder}).
 
-So now we are able to add three single bits: $a_1$, from the first number, $b_1$, from the second number and $C$, the carry bit from the summation of $a_0$ and $b_0$. This means we are only looking at the second bits.
+So now we are able to add three single bits: $a$, from the first number, $b$, from the second number and $C_{in}$, the carry bit from the last summation. 
 
 \begin{figure}[H]
 	\centering		  
@@ -123,14 +123,14 @@ So now we are able to add three single bits: $a_1$, from the first number, $b_1$
 	\label{fig:full-adder}
 \end{figure}
 \begin{itemize}
-	\item Fill in all possible combinations for $C_{in}$, $a_1$ and $b_1$ in table \ref{tab:full-adder-truth-table}. Think about what $\Sigma$ and $C_{out}$ should be and fill them in as well.
+	\item Fill in all possible combinations for $C_{in}$, $a$ and $b$ in table \ref{tab:full-adder-truth-table}. Think about what $\Sigma$ and $C_{out}$ should be and fill them in as well.
 	\item Visually test the circuit drawing for all possible combinations and compare it with your expectations for $\Sigma$ and $C_{out}$. Do they match?
 	
 	\begin{table}[h]
 		\centering
 		\begin{tabular}{|c|c|c||c|c|}
 			\hline
-			$C_{in}$ & $a_1$ & $b_1$ & $\Sigma$ & $C_{out}$ \\ \hline
+			$C_{in}$ & $a$ & $b$ & $\Sigma$ & $C_{out}$ \\ \hline
 			&     &     &          &           \\ \hline
 			&     &     &          &           \\ \hline
 			&     &     &          &           \\ \hline
