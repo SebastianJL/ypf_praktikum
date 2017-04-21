@@ -147,13 +147,14 @@
    \item High Voltage = 1
    \item Low Voltage = 0
    \item Can represent anything from numbers over letters to mp4 videos.
+   \item Binary System was invented in 1679 by Leibniz
   \end{itemize}
 
   \end{column}
   \begin{column}{6cm}
   \begin{figure}
-  \includegraphics[width=1\textwidth]{binary}
-  \caption{Binary Number}
+  \includegraphics[height=0.7\textheight]{leibniz}
+  \caption{Gottfried Leibniz, 1679}
   \end{figure}
   \end{column}
   \end{columns}
@@ -162,8 +163,8 @@
 
 \begin{frame}\frametitle{Binary Numbers}
   \begin{figure}
-  \includegraphics[height=0.7\textheight]{leibniz}
-  \caption{Gottfried Leibniz, 1679}
+  \includegraphics[width=0.8\textwidth]{dec_vs_bin}
+  \caption{Different number representations}
   \end{figure}
 \end{frame}
 
@@ -173,9 +174,9 @@
   \begin{columns}
   \begin{column}{6cm}
   \begin{itemize}
-    \item \textbf{The conjunction:} $a\land b$ is $1$ if and only if $a$ is $1$ and $b$ is $1$.\\
-    \item \textbf{The disjunction:} $a\lor b$  is $1$ if and only if $a$ is $1$ or $b$ is $1$ or both.\\
-    \item \textbf{The negation:}  $\overline{a}$ is $1$ if and only if $a$ is $0$.
+    \item \textbf{The conjunction (AND):} $a\land b$ is $1$ if and only if $a$ is $1$ and $b$ is $1$.\\
+    \item \textbf{The disjunction (OR):} $a\lor b$  is $1$ if and only if $a$ is $1$ or $b$ is $1$ or both.\\
+    \item \textbf{The negation (NOT):}  $\overline{a}$ is $1$ if and only if $a$ is $0$.
     \item Associative, Commutative, Distributive, Inverse, Zero
   \end{itemize}
   \end{column}
@@ -372,7 +373,7 @@
 \begin{frame}
   \begin{figure}[H]
 \centering
-  \includegraphics[height=0.6\textwidth]{logic_symbols}%
+  \includegraphics[width=0.8\textwidth]{gatter}%
   \caption{Logic circuit symbols}%
   \label{fig:logic_symbols}
 \end{figure}
@@ -390,7 +391,7 @@
   \begin{column}{6cm}
     \begin{figure}[H]
       \centering
-      \includegraphics[width=1\textwidth]{equivalence}%
+      \includegraphics[width=1.1\textwidth]{eq1}%
       \caption{Example for circuit design: the equivalence}%
       \label{fig:equivalence}
     \end{figure}
@@ -402,15 +403,20 @@
 \begin{frame}
   \begin{columns}
   \begin{column}{5cm}
-  Now let's make it easier: Use only NAND's!
-  \newline\newline
+  Now let's make it more complicated: \newline Use only NAND's! Why?
+  \newline
+  \begin{itemize}
+   \item It's prettier
+   \item For miniaturization, it's cheaper and more compact
+  \end{itemize}
+
  % $(\overline{a}\land \overline{b})\lor(a\land b)$
   \end{column}
   
   \begin{column}{6cm}
     \begin{figure}[H]
       \centering
-      \includegraphics[width=1\textwidth]{equivalence_optimized}%
+      \includegraphics[width=1\textwidth]{eq1}%
       \caption{Optimized equivalence circuit}%
       \label{fig:equivalence_optimized}
     \end{figure}
@@ -422,8 +428,8 @@
 \begin{frame}
   \begin{columns}
   \begin{column}{5cm}
-  Now let's make it easier: Use only NAND's!
-  How?
+  Now let's make it more complicated: 
+  \newline Use only NAND's! How?
   \newline\newline
  % $(\overline{a}\land \overline{b})\lor(a\land b)$
   \end{column}
@@ -440,16 +446,124 @@
 \end{frame}
 
 
+\begin{frame}
+  \begin{columns}
+  \begin{column}{5cm}
+  Use only NAND's! How?
+  \newline
+    \newline Example: Equivalence
+  \newline
+  $(\overline{a}\land \overline{b})\lor(a\land b)$
+  \newline
+  \begin{enumerate}
+   \item Draw circuit as in disjunctive normal-form.
+  \end{enumerate}
+
+ % $(\overline{a}\land \overline{b})\lor(a\land b)$
+  \end{column}
+  
+  \begin{column}{6cm}
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=1\textwidth]{eq1}%
+      \caption{NAND Conversion}%
+      \label{fig:equivalence_optimized}
+    \end{figure}
+  \end{column}
+  \end{columns}  
+\end{frame}
+
+\begin{frame}
+  \begin{columns}
+  \begin{column}{5cm}
+  Use only NAND's! How?
+    \newline Example: Equivalence
+  \newline
+  $(\overline{a}\land \overline{b})\lor(a\land b)$
+  \newline
+  \begin{enumerate}
+   \item Draw circuit as in disjunctive normal-form.
+   \item Plug in double inversions. See the patterns according to the conversion rules.
+  \end{enumerate}
+
+ % $(\overline{a}\land \overline{b})\lor(a\land b)$
+  \end{column}
+  
+  \begin{column}{6cm}
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=1\textwidth]{eq2}%
+      \caption{NAND Conversion}%
+      \label{fig:equivalence_optimized}
+    \end{figure}
+  \end{column}
+  \end{columns}  
+\end{frame}
+
+\begin{frame}
+  \begin{columns}
+  \begin{column}{5cm}
+  Use only NAND's! How?
+    \newline Example: Equivalence
+  \newline
+  $(\overline{a}\land \overline{b})\lor(a\land b)$
+  \newline
+  \begin{enumerate}
+   \item Draw circuit as in disjunctive normal-form.
+   \item Plug in double inversions. See the patterns according to the conversion rules.
+   \item Draw circuit again with NAND gates only.
+  \end{enumerate}
+
+ % $(\overline{a}\land \overline{b})\lor(a\land b)$
+  \end{column}
+  
+  \begin{column}{6cm}
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=1\textwidth]{eq3}%
+      \caption{NAND Conversion}%
+      \label{fig:equivalence_optimized}
+    \end{figure}
+  \end{column}
+  \end{columns}  
+\end{frame}
+
+\section{Building a circuit}
+\begin{frame}
+ Now we're ready to build the circuit with actual components!
+ 
+\end{frame}
 
 
 
-\section{Combinatoric Circuits}
 \section{Sequential Circuits}
 
+\begin{frame}\frametitle{Combinatoric vs. Sequential Circuits}
+\begin{itemize}
+ \item Sequential Circuits have a memory
+ \item Output of an operator is used again as one of the inputs
+\end{itemize}
 
+%Now we look at sequential circuits, which is different from the combinatoric circuit. Sequential circuits have something that can be looked at as a memory. The clue is, that the output of an operator is used again as one of the inputs. This means, that the circuit depends not only on combinatoric input variables, but also from the output of the step before. In this way, the functionality of a memory is realized. 
+%\end{frame}
 
+%\begin{frame}\frametitle{Loop}
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.4\textwidth]{loop}%
+  \caption{Latch}%
+  \label{fig:loop}
+\end{figure}
+\end{frame}
 
-
+\begin{frame}\frametitle{RS-Flip-Flop}
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.7\textwidth]{RSFF}%
+  \caption{RS-Flip-Flop}%
+  \label{fig:RSFF}
+\end{figure}
+\end{frame}
 
 
 \end{document}
