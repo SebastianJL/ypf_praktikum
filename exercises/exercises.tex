@@ -1,23 +1,57 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{multicol}  
+\usepackage{siunitx}
+\usepackage{float}
+\usepackage{color}
+\graphicspath{{../figures/}}
+
+\geometry{a4paper}
+
+\author{Nik Dennler \\ Johannes Lade}
+\title{Digital Electronics Lab}
+\date{\today{}}
+
+
+\begin{document}
+	
+\begin{titlepage}
+	\maketitle
+		\begin{center}
+			Email: nik.dennler@uzh.ch, johannes.lade@uzh.ch
+		\end{center}
+	\thispagestyle{empty}
+\end{titlepage}
+
+
+
+
+\tableofcontents
+\newpage
 \newpage
 \section{Exercise Block 1}
 \label{sec:exercise-block-1}
 
-\subsection{Exclusive OR (15min)}\label{subsec:ex-1}
-\textbf{Construct an XOR gate using only the giant NAND gates.}
+\subsection{Exclusive OR (30min)}\label{subsec:ex-1}
 
- XOR stands for exclusive OR. As the name suggest, it is very similar to the OR gate, except that it does not yield one when both inputs are one. In different words this means that the XOR is true whenever the two inputs are not equal. Follow the steps below to construct the XOR circuit.
+XOR stands for exclusive OR. As the name suggest, it is very similar to the OR gate, except that it does not yield one when both inputs are one. In different words this means that the XOR is true whenever the two inputs are not equal. Follow the steps below to construct the XOR circuit.
 \begin{enumerate}
 	\item Write down the truth table.
 	\item\label{it:1} Construct the disjunctive normal form from your truth table.
-	\item Draw the circuit according to step \ref{it:1}.
+	\item Draw the circuit from the disjunctive normal form.
 	\item Transform the circuit in such a way that it only uses NAND Gates.
-	\item Build the XOR you have drawn with the giant NAND gates.
 	\item How many NAND gates do you need? See if you can loose one or two gates.
 \end{enumerate}
 
-\subsection{XOR to the Next (15min)}
-\textbf{Construct the same XOR gate as in exercise \ref{subsec:ex-1} but this time with the breadboard using the tiny gates.}
-
+\subsection{XOR to the Next (30min)}
+Only start this exercise once you showed your circuit diagram to one of the assistants.
+Construct the XOR gate on the breadboard.
 
 \section{Excercise Block 2}
 
@@ -35,21 +69,22 @@ Let's first look at the addition of two decimal digits.
 \end{figure}
 We see that we need two things:
 \begin{itemize}
-	\item We need to know in which number the combination of 5 and 9 results. Namely 4.
-	\item We need to carry a digit 1 because $5+9$ exceeds 10.
+	\item In the rightmost column we need to know in which digit the addition of 5 and 9 results. $5+9=14$. But in the same column we only write the part of the number which does not exceed $10$. Namely $4$. We call this the sum and denote it with $\Sigma$.
+	\item In the next column we need to carry a 1 because $5+9$ exceeds 10. We call this the carry digit and denote it with $C$.
 \end{itemize}
 
 For binary digits (bits) we can do the same thing. Let's assume the following case. We have two 1 digit binary numbers. We call the single bit of the first number $a$ and the single bit of the second number $b$.
 \begin{itemize}
 	\item Write down all possible combinations of $a$ and $b$ in table \ref{tab:half-adder-truth-table}.
-	\item Think about the output of each combination of $a$ and $b$ and write it into table \ref{tab:half-adder-truth-table} in the column $\Sigma$ (for sum). Which logical circuit does this resemble?
-	\item Similar to the decimal case, we need to sometimes carry a bit. Write the value of the carry bit $c$ into table \ref{tab:half-adder-truth-table}. Now look at the columns $a$, $b$ and $c$. Which logical circuit does this resemble?
+	\item Think about the output of each combination of $a$ and $b$ and write it into table \ref{tab:half-adder-truth-table} in the column $\Sigma$ (for sum). Remember that a bit can never exceed one but instead wraps back to zero just as 9 does when you add 1 in the decimal system. 
+	\item Similar to the decimal case, we need to sometimes carry a bit. Write the value of the carry bit $C$ into table \ref{tab:half-adder-truth-table}.
+	\item Now look at the columns of $\Sigma$ and $C$. Which logical circuits do they represent?
 	
 	\begin{table}[H]
 		\centering
 		\begin{tabular}{|c|c||c|c|}
 			\hline
-			$a$ & $b$ & $\Sigma$   & $c$ \\ \hline
+			$a$ & $b$ & $\Sigma$   & $C$ \\ \hline
 			&     &           &       \\ \hline
 			&     &           &       \\ \hline
 			&     &           &       \\ \hline
@@ -58,7 +93,7 @@ For binary digits (bits) we can do the same thing. Let's assume the following ca
 		\caption{Truth table for the Half Adder.}
 		\label{tab:half-adder-truth-table}
 	\end{table}
-
+	
 	\item Draw the two circuits from table \ref{tab:half-adder-truth-table} with the same steps as in section \ref{subsec:ex-1} without actually building them. (Hint: One of the two circuits you know already. Use the reduced form from the last exercise.)
 	\item With the two ciruits drawn entirely with NAND gates, see if you can combine them into one.
 	\item Congrats, you have successfully drawn the circuit of a half adder. Now build one on the breadboard.
@@ -68,13 +103,15 @@ You may have noticed that the half-adder - although you can add two bits and gen
 
 If we look now at two 2 bit numbers: $a_1a_0$ and $b_1b_0$. Then the half-adder is enough in order to add the first two bits $a_0$ and $b_0$. But as soon as we want to add the next two bits $a_1$ and $b_1$ we also need to add the carry bit from the first operation. So we have $a_1+b_1+c_1$, but the half-adder is not capable of adding three bits. Consequently, if we were to build a two bit adder only with half-adders then the carry bits would just be ignored. This would lead to wrong results like this:
 \[
-	01_2 + 11_2 = 10_2
+01_2 + 11_2 = 10_2
 \]
 or in decimal
 \[
-	1_{10} + 3_{10} = 2_{10}
+1_{10} + 3_{10} = 2_{10}
 \]
-Lukily the full-adder - which can add three bits - is easily built with two half-adders, hence the name. As the derivation of the full adder is beyond the scope of this lecture, we will simply introduce its logic circuit. For simplicity we pack the circuit of the half adder into one black box and simply denote its outputs with $\Sigma$ and $C$ (See figure \ref{fig:full-adder}).
+Lukily the full-adder - which can add three single bits - is easily built with two half-adders, hence the name. As the derivation of the full adder is beyond the scope of this lecture, we will simply introduce its logic circuit. For simplicity we pack the circuit of the half adder into one black box and simply denote its outputs with $\Sigma$ and $C$ (See figure \ref{fig:full-adder}).
+
+So now we are able to add three single bits: $a_1$, from the first number, $b_1$, from the second number and $C$, the carry bit from the summation of $a_0$ and $b_0$. This means we are only looking at the second bits.
 
 \begin{figure}[h]
 	\centering		  
@@ -83,14 +120,14 @@ Lukily the full-adder - which can add three bits - is easily built with two half
 	\label{fig:full-adder}
 \end{figure}
 \begin{itemize}
-	\item Fill in all possible combinations for $c_{in}$, $a$ and $b$ in table \ref{tab:full-adder-truth-table}. Think about what $\Sigma$ and $c_{out}$ should be and fill them in as well.
-	\item Visually test the circuit drawing for all possible combinations and compare it with your expectations for $\Sigma$ and $c_{out}$. Do they match?
-
+	\item Fill in all possible combinations for $C_{in}$, $a_1$ and $b_1$ in table \ref{tab:full-adder-truth-table}. Think about what $\Sigma$ and $C_{out}$ should be and fill them in as well.
+	\item Visually test the circuit drawing for all possible combinations and compare it with your expectations for $\Sigma$ and $C_{out}$. Do they match?
+	
 	\begin{table}[h]
 		\centering
 		\begin{tabular}{|c|c|c||c|c|}
 			\hline
-			$c_{in}$ & $a$ & $b$ & $\Sigma$ & $c_{out}$ \\ \hline
+			$C_{in}$ & $a_1$ & $b_1$ & $\Sigma$ & $C_{out}$ \\ \hline
 			&     &     &          &           \\ \hline
 			&     &     &          &           \\ \hline
 			&     &     &          &           \\ \hline
@@ -103,12 +140,23 @@ Lukily the full-adder - which can add three bits - is easily built with two half
 		\caption{Truth table for the Full Adder.}
 		\label{tab:full-adder-truth-table}
 	\end{table}
-
+	
 	\item Once you have convinced yourself that the circuit is correct, translate it into only NAND gates by using the half-adders you derived earlier. (Hint: Do not transform the OR gate until the very end. You will see that it simpliefies very easily into a NAND gate.)
 	\item Build the full adder on the breadboard.
 \end{itemize}
 
 \section{Additional Exercise (Only if you got time)}
-build the RS Flip Flop
+Build the RS Flip Flop (see figure \ref{fig:RSFF}). Try to find out what it does, either with a truth table or by building it. If you need help, ask an assistant.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=0.35\textwidth]{RSFF}%
+	\caption{RS-Flip-Flop}%
+	\label{fig:RSFF}
+\end{figure}
 
 \newpage
+\end{document}
+
+
+
