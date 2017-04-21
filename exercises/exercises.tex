@@ -96,22 +96,27 @@ For binary digits (bits) we can do the same thing. Let's assume the following ca
 	\item Congrats, you have successfully drawn the circuit of a half adder. Now build one on the breadboard.
 \end{itemize}
 \subsection{Full-Adder (30min)}
-You may have noticed that the half-adder - although you can add two bits and generate a carry bit - is not enough to add several bits together. Let's see why.
+You may have noticed that the half-adder - although you can add two bits and generate a carry bit - is not enough to add several bits together.
 
-We look now at two 2 bit numbers: For example $01_2$ and $11_2$. By the way, the subscript denotes the number system in wich we write the number. So that we may know that $11_2$ means three and not eleven.  We call them $01_2 = a_1a_0$ and $11_2 = b_1b_0$. Then the half-adder is enough in order to add the first two bits $a_0$ and $b_0$. The results is $\Sigma=0$ and $C=1$ But as soon as we want to add the next two bits $a_1$ and $b_1$ we also need to add the carry bit $C$ from the first operation. So we have $a_1+b_1+C = 0 + 1 + 1$, but the half-adder is not capable of adding three bits. Consequently, if we were to build a two bit adder only with half-adders then the carry bits would just be ignored. This would lead to wrong results like this:
-\[
-a_1a_0 + b_1b_0 = 01_2 + 11_2 = 10_2
-\]
-or in decimal
-\[
-1_{10} + 3_{10} = 2_{10}
-\]
+Because, how much use is a carry bit generatated by one circuit if we cannot use it in the next one? This means we need to be able to operate on three inputs: $a$, $b$ and $C_{in}$ (See figure \ref{fig:full-binary-addition}). The half-adder cannot do that\footnote{For a more elaborate explanation see section \ref{subsec:appendix-full-adder} in the appendix.}.
+
+\begin{figure}[H]
+	\centering		  
+	\includegraphics[scale=0.3]{full_binary_addition.png}
+	\caption{Full binary addition.}
+	\label{fig:full-binary-addition}
+\end{figure}
+
+
+
+
+
 
 Lukily the full-adder - which can add three single bits - is easily built with two half-adders, hence the name. As the derivation of the full adder is beyond the scope of this lecture, we will simply introduce its logic circuit. For simplicity we pack the circuit of the half adder into one black box and simply denote its outputs with $\Sigma$ and $C$ (See figure \ref{fig:full-adder}).
 
 So now we are able to add three single bits: $a_1$, from the first number, $b_1$, from the second number and $C$, the carry bit from the summation of $a_0$ and $b_0$. This means we are only looking at the second bits.
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering		  
 	\includegraphics[scale=0.3]{full_adder.png}
 	\caption{Full adder built of two half-adders.}
@@ -153,7 +158,17 @@ Build the RS Flip Flop (see figure \ref{fig:RSFF}). Try to find out what it does
 	\label{fig:RSFF}
 \end{figure}
 
-\newpage
+\section{Appendix}
+\subsection{Full Adder}\label{subsec:appendix-full-adder}
+
+Look at two 2 bit numbers: For example $01_2$ and $11_2$\footnote{The subscript denotes the number system in wich we write the number. So that we may know that $11_2$ means three and not eleven.}.  We call them $01_2 = a_1a_0$ and $11_2 = b_1b_0$. Then the half-adder is enough in order to add the first two bits $a_0$ and $b_0$. The results is $\Sigma=0$ and $C=1$. But as soon as we want to add the next two bits $a_1$ and $b_1$ we also need to add the carry bit $C$ from the first operation. So we have $a_1+b_1+C = 0 + 1 + 1$, but the half-adder is not capable of adding three bits. Consequently, if we were to build a two bit adder only with half-adders then the carry bits would just be ignored. This would lead to wrong results like this:
+\[
+a_1a_0 + b_1b_0 = 01_2 + 11_2 = 10_2
+\]
+or in decimal
+\[
+1_{10} + 3_{10} = 2_{10}
+\]
 \end{document}
 
 
