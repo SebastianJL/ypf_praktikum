@@ -168,10 +168,11 @@ In figure \ref{fig:RSFF} you see a logic circuit that is called an RS Flip-Flop.
 	\label{fig:RSFF}
 \end{figure}
 
+\newpage
 \section{Appendix}
 \subsection{Full Adder}\label{subsec:appendix-full-adder}
 
-Look at two 2 bit numbers: For example $01_2$ and $11_2$\footnote{The subscript denotes the number system in wich we write the number. So that we may know that $11_2$ means three and not eleven.}.  We call them $01_2 = a_1a_0$ and $11_2 = b_1b_0$. Then the half-adder is enough in order to add the first two bits $a_0$ and $b_0$. The results is $\Sigma=0$ and $C=1$. But as soon as we want to add the next two bits $a_1$ and $b_1$ we also need to add the carry bit $C$ from the first operation. So we have $a_1+b_1+C = 0 + 1 + 1$, but the half-adder is not capable of adding three bits. Consequently, if we were to build a two bit adder only with half-adders then the carry bits would just be ignored. This would lead to wrong results like this:
+Look at two 2 bit numbers: For example $01_2$ and $11_2$\footnote{The subscript denotes the number system in which we write the number. So that we may know that $11_2$ means three and not eleven.}.  We call them $01_2 = a_1a_0$ and $11_2 = b_1b_0$. Then the half-adder is enough in order to add the first two bits $a_0$ and $b_0$. The results is $\Sigma=0$ and $C=1$. But as soon as we want to add the next two bits $a_1$ and $b_1$ we also need to add the carry bit $C$ from the first operation. So we have $a_1+b_1+C = 0 + 1 + 1$, but the half-adder is not capable of adding three bits. Consequently, if we were to build a two bit adder only with half-adders then the carry bits would just be ignored. This would lead to wrong results like this:
 \[
 a_1a_0 + b_1b_0 = 01_2 + 11_2 = 10_2
 \]
