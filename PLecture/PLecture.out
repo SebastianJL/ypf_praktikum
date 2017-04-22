@@ -1,9 +1,11 @@
 \BOOKMARK [2][]{Outline0.1}{Introduction}{}% 1
-\BOOKMARK [2][]{Outline0.2}{Digital Circuits}{}% 2
-\BOOKMARK [2][]{Outline0.3}{Binary Numbers}{}% 3
-\BOOKMARK [2][]{Outline0.4}{Boolean Algebra}{}% 4
-\BOOKMARK [2][]{Outline0.5}{Truth Tables}{}% 5
-\BOOKMARK [2][]{Outline0.6}{Disjunctive Normal-Form}{}% 6
-\BOOKMARK [2][]{Outline0.7}{Drawing a circuit}{}% 7
-\BOOKMARK [2][]{Outline0.8}{Building a circuit}{}% 8
-\BOOKMARK [2][]{Outline0.9}{Sequential Circuits}{}% 9
+\BOOKMARK [2][]{Outline0.2}{Theory}{}% 2
+\BOOKMARK [3][]{Outline0.2.1.7}{Digital Circuits}{Outline0.2}% 3
+\BOOKMARK [3][]{Outline0.2.2.9}{Binary Numbers}{Outline0.2}% 4
+\BOOKMARK [3][]{Outline0.2.3.12}{Boolean Algebra}{Outline0.2}% 5
+\BOOKMARK [3][]{Outline0.2.4.14}{Truth Tables}{Outline0.2}% 6
+\BOOKMARK [3][]{Outline0.2.5.16}{Disjunctive Normal-Form}{Outline0.2}% 7
+\BOOKMARK [2][]{Outline0.3}{Drawing and building a circuit}{}% 8
+\BOOKMARK [3][]{Outline0.3.1.19}{Drawing a circuit}{Outline0.3}% 9
+\BOOKMARK [3][]{Outline0.3.2.28}{Building a circuit}{Outline0.3}% 10
+\BOOKMARK [2][]{Outline0.4}{Sequential Circuits}{}% 11

@@ -94,7 +94,27 @@
 \end{frame}
 
 
-\section{Digital Circuits}
+\begin{frame}\frametitle{Now what do we do with it?}
+  \begin{columns}
+  \begin{column}{6cm}
+  \begin{itemize}
+   \item A computer is (most often) an electrical circuit
+   \item Circuit should be able to calculate numbers and save them somehow
+  \end{itemize}
+
+
+  \end{column}
+  \begin{column}{6cm}
+  \begin{figure}
+  \includegraphics[width=0.9\textwidth]{4004}
+  \caption{Intel 4004 Processor}
+  \end{figure}
+  \end{column}
+  \end{columns}
+\end{frame}
+
+\section{Theory}
+\subsection{Digital Circuits}
 \begin{frame}\frametitle{Analog Circuit}
   \begin{columns}
   \begin{column}{6cm}
@@ -109,7 +129,7 @@
   \end{column}
   \begin{column}{6cm}
   \begin{figure}
-  \includegraphics[width=1\textwidth]{analog}
+  \includegraphics[width=0.9\textwidth]{analog}
   \caption{Analog Signal}
   \end{figure}
   \end{column}
@@ -139,7 +159,27 @@
 \end{frame}
 
 
-\section{Binary Numbers}
+\subsection{Binary Numbers}
+\begin{frame}\frametitle{Binary Numbers}
+  \begin{columns}
+  \begin{column}{6cm}
+  \begin{itemize}
+   \item<1-> High Voltage = 1
+   \item<1-> Low Voltage = 0
+   \item<1-> Can represent anything from numbers over letters to mp4 videos.
+   \item 
+  \end{itemize}
+
+  \end{column}
+  \begin{column}{6cm}
+%   \begin{figure}
+%   \includegraphics[height=0.6\textheight]{leibniz}
+%   \caption{Gottfried Leibniz, 1679}
+%   \end{figure}
+  \end{column}
+  \end{columns}
+\end{frame}
+
 \begin{frame}\frametitle{Binary Numbers}
   \begin{columns}
   \begin{column}{6cm}
@@ -153,7 +193,7 @@
   \end{column}
   \begin{column}{6cm}
   \begin{figure}
-  \includegraphics[height=0.7\textheight]{leibniz}
+  \includegraphics[height=0.6\textheight]{leibniz}
   \caption{Gottfried Leibniz, 1679}
   \end{figure}
   \end{column}
@@ -169,15 +209,15 @@
 \end{frame}
 
 
-\section{Boolean Algebra}
+\subsection{Boolean Algebra}
 \begin{frame}\frametitle{Boolean Algebra}
   \begin{columns}
   \begin{column}{6cm}
   \begin{itemize}
-    \item \textbf{The conjunction (AND):} $a\land b$ is $1$ if and only if $a$ is $1$ and $b$ is $1$.\\
-    \item \textbf{The disjunction (OR):} $a\lor b$  is $1$ if and only if $a$ is $1$ or $b$ is $1$ or both.\\
-    \item \textbf{The negation (NOT):}  $\overline{a}$ is $1$ if and only if $a$ is $0$.
-    \item Associative, Commutative, Distributive, Inverse, Zero
+    \item<1-> \textbf{The conjunction (AND):} $a\land b$ is $1$ if and only if $a$ is $1$ and $b$ is $1$.\\
+    \item<1->  \textbf{The disjunction (OR):} $a\lor b$  is $1$ if and only if $a$ is $1$ or $b$ is $1$ or both.\\
+    \item<1->  \textbf{The negation (NOT):}  $\overline{a}$ is $1$ if and only if $a$ is $0$.
+    \item<2->  Associative, Commutative, Distributive, Inverse, Zero
   \end{itemize}
   \end{column}
   
@@ -200,7 +240,7 @@
   \end{columns}
 \end{frame}
 
-\section{Truth Tables}
+\subsection{Truth Tables}
 \begin{frame}\frametitle{Truth tables}
   \begin{table}[H]
   \centering
@@ -227,14 +267,14 @@
   1          & 1          & 1            & 1            & 0          & 1        & 0  
   \end{tabular}
   \caption{truth table}
-  \label{tab:truth}
+  \label{tab:truth3}
   \end{table}
 \end{frame}
 
 
 
-\section{Disjunctive Normal-Form}
-\begin{frame}
+\subsection{Disjunctive Normal-Form}
+\begin{frame}\frametitle{Disjunctive Normal-Form}
   
   \begin{columns}
   \begin{column}{6cm}
@@ -246,8 +286,6 @@
      \item Combine inputs with AND. Each row separatly.
      \item Combine rows with logical OR.
     \end{enumerate}
-
-    
     \item Example 1: 
     \begin{itemize}
       \item [\textbf{AND:}]$(a\land b)$
@@ -267,7 +305,7 @@
   1          & 1          & 1 
   \end{tabular}
   \caption{truth table}
-  \label{tab:truth}
+  \label{tab:truth4}
   \end{table}
   \end{column}
   
@@ -275,7 +313,7 @@
 \end{frame}
 
 
-\begin{frame}
+\begin{frame}\frametitle{Disjunctive Normal-Form}
   
   \begin{columns}
   \begin{column}{6cm}
@@ -287,8 +325,6 @@
      \item Combine inputs with AND. Each row separatly.
      \item Combine rows with logical OR.
     \end{enumerate}
-
-    
     \item Example 2: 
     \begin{itemize}
       \item [\textbf{OR:}]$(a\land \overline{b})\lor(\overline{a}\land b)\lor(a\land b)$
@@ -319,7 +355,7 @@
 \end{frame}
 
 
-\begin{frame}
+\begin{frame}\frametitle{Disjunctive Normal-Form}
   
   \begin{columns}
   \begin{column}{6cm}
@@ -331,8 +367,6 @@
      \item Combine inputs with AND. Each row separatly.
      \item Combine rows with logical OR.
     \end{enumerate}
-
-    
     \item Example 3: 
     \begin{itemize}
       \item [\textbf{==:}]$(\overline{a}\land \overline{b})\lor(a\land b)$
@@ -367,10 +401,10 @@
 
 
 
+\section{Drawing and building a circuit}
+\subsection{Drawing a circuit}
 
-\section{Drawing a circuit}
-
-\begin{frame}
+\begin{frame}\frametitle{Logic Gates}
   \begin{figure}[H]
 \centering
   \includegraphics[width=0.8\textwidth]{gatter}%
@@ -380,18 +414,18 @@
 \end{frame}
 
 
-\begin{frame}
+\begin{frame}\frametitle{From Normal-Form to Circuit Diagram}
   \begin{columns}
   \begin{column}{5cm}
   Disjunctive normal-form for the equivalence: 
   \newline\newline
-  $(\overline{a}\land \overline{b})\lor(a\land b)$
+  $(a\land b)\lor(\overline{a}\land \overline{b})$
   \end{column}
   
   \begin{column}{6cm}
     \begin{figure}[H]
       \centering
-      \includegraphics[width=1.1\textwidth]{eq1}%
+      \includegraphics[width=1\textwidth]{eq1}%
       \caption{Example for circuit design: the equivalence}%
       \label{fig:equivalence}
     \end{figure}
@@ -400,14 +434,19 @@
 \end{frame}
 
 
-\begin{frame}
+\begin{frame} \frametitle{NAND-Conversion}
   \begin{columns}
   \begin{column}{5cm}
   Now let's make it more complicated: \newline Use only NAND's! Why?
-  \newline
+      \begin{figure}[H]
+%       \centering
+      \includegraphics[width=0.35\textwidth]{nand}%
+      \caption{NAND Gate}%
+      \label{fig:nand}
+    \end{figure}
   \begin{itemize}
-   \item It's prettier
-   \item For miniaturization, it's cheaper and more compact
+   \item<2-> It's prettier
+   \item<3-> For miniaturization, it's cheaper and more compact
   \end{itemize}
 
  % $(\overline{a}\land \overline{b})\lor(a\land b)$
@@ -425,7 +464,7 @@
 \end{frame}
 
 
-\begin{frame}
+\begin{frame}  \frametitle{NAND-Conversion}
   \begin{columns}
   \begin{column}{5cm}
   Now let's make it more complicated: 
@@ -439,14 +478,14 @@
       \centering
       \includegraphics[width=1\textwidth]{nand_conversion}%
       \caption{NAND Conversion}%
-      \label{fig:equivalence_optimized}
+      \label{fig:nand_conversion}
     \end{figure}
   \end{column}
   \end{columns}  
 \end{frame}
 
 
-\begin{frame}
+\begin{frame}  \frametitle{NAND-Conversion}
   \begin{columns}
   \begin{column}{5cm}
   Use only NAND's! How?
@@ -467,13 +506,13 @@
       \centering
       \includegraphics[width=1\textwidth]{eq1}%
       \caption{NAND Conversion}%
-      \label{fig:equivalence_optimized}
+      \label{fig:eq1}
     \end{figure}
   \end{column}
   \end{columns}  
 \end{frame}
 
-\begin{frame}
+\begin{frame}  \frametitle{NAND-Conversion}
   \begin{columns}
   \begin{column}{5cm}
   Use only NAND's! How?
@@ -494,13 +533,13 @@
       \centering
       \includegraphics[width=1\textwidth]{eq2}%
       \caption{NAND Conversion}%
-      \label{fig:equivalence_optimized}
+      \label{fig:eq2}
     \end{figure}
   \end{column}
   \end{columns}  
 \end{frame}
 
-\begin{frame}
+\begin{frame}  \frametitle{NAND-Conversion}
   \begin{columns}
   \begin{column}{5cm}
   Use only NAND's! How?
@@ -522,14 +561,14 @@
       \centering
       \includegraphics[width=1\textwidth]{eq3}%
       \caption{NAND Conversion}%
-      \label{fig:equivalence_optimized}
+      \label{fig:eq3}
     \end{figure}
   \end{column}
   \end{columns}  
 \end{frame}
 
-\section{Building a circuit}
-\begin{frame}
+\subsection{Building a circuit}
+\begin{frame}  \frametitle{Building a circuit}
  Now we're ready to build the circuit with actual components!
  
 \end{frame}
